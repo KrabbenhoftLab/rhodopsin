@@ -12,7 +12,7 @@ library("phytools")
 library("ape")
 
 ##load tree
-tree<-read.tree("actinopt_12k_treePL.tre")
+tree<-read.tree("full_time_tree_Rabosky.nw")
 tree<-ladderize(tree,right=F)
 
 ##check tree
