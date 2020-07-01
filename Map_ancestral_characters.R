@@ -25,10 +25,10 @@ require(phytools)
 
 #STEP 3: Merge your two tree files. This step will ONLY work if your two tree files have exactly the same topology.
 #If they don't have the same topology, that's weird and you did something wrong with RAxML.
-#The first tree we'll load in is the one you input into RAxML. This has branch lengths, but the ancestors aren't labelled. (Replace "trimmed-time-tree.nw" with your own file.)
+#The first tree we'll load in is the one you input into RAxML. This has branch lengths, but the ancestors aren't labelled. This tree is the output from the tree pruning R script.
 ultrametric <- read.tree("trimmed-time-tree.nw")
 #The second tree we'll load in is the one you got in the output of RAxML. This has labelled ancestors, but no branch lengths. (Replace "RAxML_node_labelled_rooted_tree.tre" with your own file.)
-labeled <- read.tree("RAxML_node_labelled_rooted_tree_6_23_20.tre")
+labeled <- read.tree("RAxML_node_labelled_tree.nw")
 #This next step makes a new list in the ultrametric tree; the node labels in the labeled tree fill that list.
 ultrametric$node.label <- labeled$node.label
 #This last line is optional, but it's good to do. It saves the "ultrametric" tree to a file, where now the nodes of the tree have labels according to how they were assigned in RAxML. 
