@@ -19,7 +19,7 @@ tree<-ladderize(tree,right=F)
 plot(tree, cex=0.3)
 
 ##read in taxon list
-data<-read.table("taxa-used-by-hill-plus-baikal-and-cisco.txt", header = T)
+data<-read.table("list_of_taxa_to_keep.txt", header = F)
 
 ##check data
 data
